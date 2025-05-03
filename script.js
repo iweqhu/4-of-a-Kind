@@ -62,7 +62,7 @@ function showSection(sectionId) {
       taskStatus[inputId] = true;
       checkAllTasksCompleted();
     } else {
-      feedback.textContent = "❌ Napačen odgovor. Poskusi znova.";
+      feedback.textContent = "❌ Napačen odgovor. Poskusite znova.";
       feedback.style.color = "#6e2f2f";
       askStatus[inputId] = false;
     }
@@ -91,7 +91,7 @@ function showSection(sectionId) {
       taskStatus[inputId] = true;
       checkAllTasksCompleted();
     } else {
-      feedback.textContent = "❌ Napačen odgovor. Poskusi znova.";
+      feedback.textContent = "❌ Napačen odgovor. Poskusite znova.";
       feedback.style.color = "#6e2f2f";
       taskStatus[inputId] = false;
     }
@@ -114,7 +114,7 @@ function showSection(sectionId) {
     const parts = cleaned.split(/[;,]/);
   
     if (parts.length !== 2) {
-      feedback.textContent = "❌ Napačen format. Vpiši npr. 56.47,23.31 ali 56.47;23.31";
+      feedback.textContent = "❌ Napačen format. Vpišite npr. 56.47,23.31 ali 56.47;23.31";
       feedback.style.color = "#6e2f2f";
       return;
     }
@@ -123,7 +123,7 @@ function showSection(sectionId) {
     const lon = round(parseFloat(parts[1]));
   
     if (isNaN(lat) || isNaN(lon)) {
-      feedback.textContent = "❌ Napačne številke. Poskusi znova.";
+      feedback.textContent = "❌ Napačne številke. Poskusite znova.";
       feedback.style.color = "#6e2f2f";
       return;
     }
@@ -137,7 +137,7 @@ function showSection(sectionId) {
       taskStatus[inputId] = true;
       checkAllTasksCompleted();
     } else {
-      feedback.textContent = "❌ Napačen odgovor. Poskusi znova.";
+      feedback.textContent = "❌ Napačen odgovor. Poskusite znova.";
       feedback.style.color = "#6e2f2f";
       taskStatus[inputId] = false;
     }
