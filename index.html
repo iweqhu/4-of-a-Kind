@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="icons/logo.png">
+  <title>4 of a kind</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="left">
+      <img src="icons/logo.png" alt="4 of a kind logo" class="logo" />
+      <div class="team-name">4 of a kind</div>
+    </div>
+    <nav class="center-nav">
+      <button class="nav-btn" onclick="showSection('navodila-section')">Navodila</button>
+      <button class="nav-btn" onclick="showSection('naloge-section')">Naloge</button>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <div class="centered-container">
+      <section id="navodila-section" class="content-section dark-fantasy-text">
+        <h1>🕯️ Navodila</h1>
+  
+        <p><strong>Dobrodošli, dragi moji.</strong></p>
+  
+        <p>
+          Pred vami se nahaja <em>neobičajna škatla</em>.<br>
+          Njen namen ni jasen. Njena vsebina – še manj.<br>
+          A ena stvar je gotovo resnična: <strong>odpre se le izbranim</strong>.
+        </p>
+  
+        <p>
+          Da bi prišli do njenega skrivnostnega jedra,<br>
+          morate rešiti <strong>tri sklope izzivov</strong>.<br>
+          Vsak sklop, ko je rešen, <em>prebudi električni tok</em>.<br>
+          Ko so vsi trije aktivirani... <strong>škatla popusti svojo zaporo</strong>.
+        </p>
+
+        <p>
+          Če ste pripravljeni na ta preizkus, kliknite <strong>"Izzivi"</strong><br>
+          in sledite sledem, ki vam bodo razkrile pot naprej.
+        </p>
+  
+        <p><strong>Ne zaupaj očem. Ne zaupaj zvoku.<br>Zaupaj sebi.</strong></p>
+  
+        <p><strong>Vso srečo, iskalci.<br>Naj se lov na resnico začne.</strong> 🌘</p>
+
+        <div class="button-group">
+          <button class="nav-btn izzivi-btn">Izzivi</button>
+        </div>
+
+        <!-- Izzivi Overlay -->
+        <div id="izziviOverlay" class="overlay hidden">
+          <div class="scroll-container">
+            <button class="close-btn" onclick="closeOverlay('izziviOverlay')">✕</button>
+            <div class="scroll-inner">
+              <h2 style="color: #2e2b26; text-align: center;">🧩 <span style="color: #6e2f2f;">Izzivi</span></h2>
+
+              <p><strong style="color: #6e2f2f;">Izziv I</strong><br>
+                <span style="color: #3b2a1d;">
+                  Namigi niso skriti – le zreti morate tja, kjer jih nihče več ne opazi.<br>
+                  Vse odgovore nosi škatla sama. Njena površina šepeta tistim, ki znajo poslušati.
+                </span>
+              </p>
+
+              <p><strong style="color: #6e2f2f;">Izziv II</strong><br>
+                <span style="color: #3b2a1d;">
+                  Pred vami se razprostira šahovnica 4x4 – ni bojno polje, temveč preizkušnja natančnosti in razuma.<br>
+                  Vaša naloga: <strong style="color: #6e2f2f;">prebujanje toka</strong>.<br>
+                  Postaviti morate <strong style="color: #6e2f2f;">4 ploščice (??)</strong> – in to le v <strong style="color: #6e2f2f;">prava polja</strong>.<br>
+                  <span style="color: #4a4328;">A kaj je »pravo«, vam razkrijejo le izbrani izračuni.</span><br>
+                  <em style="color: #5a4b38;">Sledite nalogam, ki razkrivajo resnico spodaj…</em>
+                </span>
+              </p>
+
+              <button class="nav-btn" onclick="closeOverlay('izziviOverlay');showSection('naloge-section')">Naloge</button>
+
+              <p><strong style="color: #6e2f2f;">Izziv III</strong><br>
+                <span style="color: #3b2a1d;">
+                  Zadnji preizkus je prežet z močjo elementov.<br>
+                  Pred vami je <strong style="color: #6e2f2f;">Peltierjev modul</strong> – ledeni kamen z ognjem v srcu.<br>
+                  Ko bo vse pravilno povezano, se bo električni tok sklenil…<br>
+                  <em style="color: #5a4b38;">…in škatla se bo odprla. A le za kratek čas.</em><br>
+                  <span style="color: #4a4328;">Bodite pripravljeni, kajti vrata v neznano se ne odpirajo dvakrat.</span>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+      <section id="naloge-section" class="content-section hidden">
+        <div class="text-block dark-fantasy-text">
+          <h1>🧠 Naloge</h1>
+
+          <!-- Naloga 1 -->
+          <div class="naloga">
+            <strong>Naloga 1</strong>
+            <p><span style="font-style: italic;">...Oči imej odprte, saj videz lahko vara...</span><br><br>
+               Poveži slike s pravimi imeni predmetov. <br>
+               Nekatera imena se lahko pojavijo več kot enkrat…</p>
+            <div class="question">
+              <div class="img-wrapper">
+                <img src="images/naloga1.png" alt="Namig za nalogo 1" class="naloga-img">
+              </div>
+              <div class="answers" style="margin-left: 15px;">
+                <p style="margin: 0px;">
+                  1. Luna v mrku <br>
+                  2. Herschelova granatna zvezda <br> 
+                  3. Pluton <br>
+                  4. Kos šunke <br>
+                </p>
+                <p class="lined-text" style="font-size: smaller; font-weight: bold; font-style: italic; color: #cccccc; margin: 0px"> Vnesi odgovor, kot <span style="color: #ba4f4f">zaporedje števk brez presledkov</span>, vsaka od katerih je odgovor po vrsti za A, B, C in D primere. </p>
+                <div class="answer-block">
+                  <label for="answer1" style="font-weight: bolder;">Tvoj odgovor:</label> <br>
+                  <input type="text" id="answer1" class="answer-input" /> <br>
+                  <button onclick="checkHashedAnswer('answer1', 'fbc1f6898b3fd1d2d806fcb944fe535ff5f4a1d973d8ef218558dd2e9ae526a3')">Preveri</button>
+                  <p id="feedback-answer1" class="feedback"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Naloga 2 -->
+          <div class="naloga">
+            <strong>Naloga 2</strong>
+            <p><span style="font-style: italic;">...Ko zvezde utihnejo, začnejo govoriti zakoni, ki vežejo svet...</span> <br><br>Pri katerem a ∈ ℤ, imata funkciji eno skupno ničlo:</p>
+            <p style="margin: 0px;">$$ f(x) = x^2 + ax + 1 $$</p>
+            <p style="margin: 0px;">$$ f(x) = -x^2 + 2x + 3 $$</p>
+            <div class="answer-block">
+              <label for="answer2" style="font-weight: bolder;">Tvoj odgovor:</label> <br>
+              <input type="text" id="answer2" class="answer-input" /> <br>
+              <button onclick="checkHashedAnswer('answer2', 'd4735e3a265e16eee03f59718b9b5d03019c07d8b6c51f90da3a666eec13ab35')">Preveri</button>
+              <p id="feedback-answer2" class="feedback"></p>
+            </div>            
+          </div>
+      
+          <!-- Naloga 3 -->
+          <div class="naloga">
+            <strong>Naloga 3</strong>
+            <div class="question">
+              <p>
+                <span style="font-style: italic;">...Ko se sile prepletajo, resnica leži tam, kjer jih najmanj pričakuješ...</span> <br><br>
+                Na vrhu poševnega kamnitega klanca z naklonom 35° in višino 2 m miruje utež mase 1 kg. 
+                Sila lepenja je ravno zadostna, da prepreči zdrs in enaka sili trenja.
+                Na dnu klanca je nameščena vzmet.
+                V nekem trenutku na utež deluje sila vzporedno z nagnjeno ravnino, ki traja 0,01 s. 
+                Po potisku se utež premakne navzdol, zadene vzmet in se nato odbije nazaj — ustavi pa se točno na sredini klanca.
+                Vprašanje: Kolikšna je bila sila, ki je delovala na utež?
+              </p>
+              <p class="lined-text" style="font-size: smaller; font-weight: bold; font-style: italic; color: #cccccc; margin: 0px"> Vnesi odgovor v Newtonih, kot <span style="color: #ba4f4f"> celo število</span> (brez decimalk ali enot)</p>
+            
+              <div class="answer-block">
+                <label for="answer3" style="font-weight: bolder;">Tvoj odgovor:</label> <br>
+                <input type="number" id="answer3" class="answer-input" /> 
+                <button onclick="checkHashedRangeAnswer('answer3')">Preveri</button>
+                <p id="feedback-answer3" class="feedback"></p>
+
+              </div>
+            </div>
+          </div>
+      
+          <!-- Naloga 4 -->
+          <div class="naloga">
+            <strong>Naloga 4</strong>
+            <p><span style="font-style: italic;">...Skrivni simboli treh dežel čakajo, da odkriješ njihovo ravnotežje...</span><br><br>
+              Na skrivnostni, zarotirani karti Evrope ugotovi tri mesta, označena z rdečimi pikami. Nato odkrij točko ravnovesja – 
+              skrivni kraj, ki je natanko enako oddaljen od vseh treh mest – in zapiši njene koordinate.
+            </p>
+            <div class="question">
+              <div class="img-wrapper">
+                <img src="images/naloga4.png" alt="Namig za nalogo 4" class="naloga-img">
+              </div>
+              <div class="answers" style="margin-left: 15px;">
+                <p class="lined-text" style="font-size: smaller;">Pri računanju koordinate vsakega mesta ter končnega odgovora zaokroži <span style="color: #ba4f4f">na 2 decimalni mesti</span>. <br> Ukrivljenost Zemlje zanemari. <br> Zapiši koordinate v obliki <span style="color: #ba4f4f">x,y</span> (npr. 46.88,26.53) <span style="color: #ba4f4f">brez presledkov</span></p>
+                <div class="answer-block">
+                  <label for="answer4" style="font-weight: bolder;">Tvoj odgovor:</label> <br>
+                  <input type="text" id="answer4" class="answer-input" /> <br>
+                  <button onclick="checkCoordsAnswer('answer4', 46.27, 15.30, 0.05)">Preveri</button>
+                  <p id="feedback-answer4" class="feedback"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <button id="check-solutions-btn">Rešeno</button>
+          <div id="reseno-msg" class="reseno-msg hidden"></div>
+
+        </div>
+
+        <!-- Пергаментный свиток -->
+        <div id="scroll-overlay" class="overlay hidden">
+          <div class="scroll-container">
+            <button class="close-btn" onclick="closeOverlay('scroll-overlay')">✖</button>
+            <div class="scroll-text">
+              <div class="scroll-inner">
+                <h2 class="scroll-title" style="color: #6e2f2f; text-align: center;">♔ Odgovor za šahovnico</h2><br><br>
+                <p class="scroll-code"><span id="lock-code" style="color: #3b2a1d; font-weight: bolder;">A1-B4-C2-D4</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 <span style="font-weight: bold;">4 of a kind.</span>| Contact: fourofakind@gmail.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+  
+</body>
+</html>
