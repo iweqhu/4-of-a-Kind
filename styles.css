@@ -103,6 +103,7 @@ html, body {
 }
 
 .site-main {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -112,6 +113,53 @@ html, body {
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
 }
+
+.help-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-button .help-icon {
+  width: 50%;
+  height: 50%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  animation: flickerGlow 4s infinite;
+}
+
+@keyframes flickerGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.8));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgb(248, 175, 91));
+  }
+}
+
+.scroll-rules {
+  text-align: left;
+  padding-left: 1.2em;
+  list-style: none;
+}
+
+.scroll-rules li {
+  margin-bottom: 0.8em;
+  line-height: 1.5em;
+}
+
 
 .content-section {
   width: 100%;
@@ -142,7 +190,6 @@ button.nav-btn {
   min-height: calc(100vh - 100px); /* учитывает высоту header и footer */
   padding: 20px;
 }
-
 
 .dark-fantasy-text {
   font-family: 'MedievalSharp-Regular', serif;
